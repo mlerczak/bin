@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [ -n "${1}" ];
+then
+    docker ps --format "{{.Names}}" | grep "${1}\."
+else
+    exit 1
+fi
